@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  </style>
+</head>
+<body>
+  <div class="site-container">
+    <div class="content">
+      <img src="./images/bg-main-desktop.png" class="bg-img-dsk">
+      <div class="form-half">
+        <form action="#">
+          <label for="name">
+            <span>CARDHOLDER NAME</span>
+          </label>
+          <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+          <label for="number">
+            <span>CARD NUMBER</span>
+          </label>
+          <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000">
+          <div class="end-details">
+            <label>
+              <span>EXP. DATE (MM/YY)</span>
+              <div class="date">
+                <input type="text" id="month" placeholder="MM">
+                <input type="text" id="year" placeholder="YY">
+              </div>
+            </label>
+            <label for="cvc">
+              <span>CVC</span>
+              <input type="text" id="cvc" placeholder="e.g. 123">
+            </label>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+        <div class="completed">
+          <img src="./images/icon-complete.svg" alt="complete" class="check">
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+      </div>
+      <div class="card-front">
+        <img src="./images/card-logo.svg" alt="logo" class="logo">
+        <div class="card-content">
+          <h1 id="card-number-display">0000 0000 0000 0000</h1>
+          <div class="lower-card-details">
+            <span id="name-display">JANE APPLESEED</span>
+            <span id="date-display">00/00</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-back">
+        <span id="cvc-display">000</span>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/dbidmead" target="_blank">Drew Bidmead</a>.
+    </div>
+  </div>
+</body>
+<footer>
+  <script src="app.js"></script>
+</footer>
+</html>

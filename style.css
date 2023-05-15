@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+    --red: hsl(0, 100%, 66%);
+    --dark: hsl(278, 68%, 11%);
+    --violet: hsl(279, 6%, 55%);
+    --grey: hsl(270, 3%, 87%);
+}
+
+*{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.completed {
+    display: none;
+}
+
+.site-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.form-half {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    height: 360px;
+}
+
+form>label {
+    display: flex;
+    flex-direction: column;
+}
+
+form>label>span {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--dark);
+}
+
+input {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    height: 2.5em;
+    padding: 1em;
+    border-radius: 8px;
+    border: 1px solid var(--grey);
+}
+
+input::placeholder {
+    color: var(--grey);
+}
+
+input:focus {
+    outline-color: hsl(249, 99%, 64%);
+}
+
+.end-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.date>input {
+    width: 4em;
+}
+
+#cvc {
+    width: 100%;
+}
+
+.end-details>label>span {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    color: var(--dark);
+}
+
+.date {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    height: 3rem;
+    border-radius: 8px;
+    background-color: var(--dark);
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    border: 1px solid var(--dark);
+    background-color: white;
+    color: var(--dark);
+}
+
+.card-front {
+    position: absolute;
+    left: 170px;
+    top: 190px;
+    width: 445px;
+    height: 245px;
+    background-image: url(./images/bg-card-front.png);
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.logo {
+    align-self: flex-start;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card-content>h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+}
+
+.lower-card-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lower-card-details>span {
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+}
+
+.card-back {
+    position: absolute;
+    left: 260px;
+    top: 475px;
+    width: 445px;
+    height: 245px;
+    background-image: url(./images/bg-card-back.png);
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3rem;
+    color: white;
+}
+
+.card-back>span {
+    font-size: 0.85rem;
+    margin-top: -0.15rem;
+    letter-spacing: 0.15em;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: absolute;
+    bottom: 5px;
+}
+
+.attribution a { 
+    color: hsl(249, 99%, 64%); 
+    font-size: inherit;
+    text-decoration: none;
+}
