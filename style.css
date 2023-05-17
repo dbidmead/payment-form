@@ -20,6 +20,10 @@ body {
     overflow: hidden;
 }
 
+.bg-img-mobile {
+    display: none;
+}
+
 .site-container {
     width: 100vw;
     height: 100vh;
@@ -256,4 +260,77 @@ button:hover {
     color: hsl(249, 99%, 64%); 
     font-size: inherit;
     text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        overflow-y: scroll;
+    }
+    
+    .bg-img-dsk {
+        display: none;
+    }
+
+    .bg-img-mobile {
+        display: block;
+        max-width: 100%;
+    }
+    
+    .content {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .form-half {
+        justify-content: center;
+    }
+    
+    .completed {
+        align-self: flex-end;
+        margin-bottom: 1.5rem;
+    }
+    
+    form {
+        max-width: 330px;
+        max-height: 380px;
+        align-self: flex-end;
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-front {
+        left: 1rem;
+        top: 7.5rem;
+        width: 325px;
+        height: 200px;
+        background-size: cover;
+        z-index: 10;
+    }
+    
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        width: 100%;
+    }
+    
+    .card-content>h1 {
+        font-size: 1rem;
+    }
+    
+    .card-back {
+        left: 4rem;
+        top: 1.5rem;
+        width: 325px;
+        height: 190px;
+        background-size: cover;
+        padding: 1.5rem;
+    }
+    
+    .card-back>span {
+        font-size: 0.65rem;
+    }
+    
+    .attribution { 
+        display: none;
+    }
 }

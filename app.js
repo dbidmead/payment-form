@@ -120,24 +120,29 @@ submitBtn.addEventListener('click', (e) => {
             thankYou.setAttribute('style', 'display:flex');
             continueBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                
+
                 thankYou.setAttribute('style', 'display:none');
                 form.setAttribute('style', 'display:flex');
 
                 nameInput.value = '';
                 nameInput.display.textContent = 'Jane Appleseed';
+                nameInput.classList.remove('invalid');
 
                 numberInput.value = '';
                 numberInput.display.textContent = '0000 0000 0000 0000';
+                numberInput.classList.remove('invalid');
 
                 monthInput.value = '';
                 monthInput.display.textContent = '00';
+                monthInput.classList.remove('invalid');
 
                 yearInput.value = '';
                 yearInput.display.textContent = '00';
+                yearInput.classList.remove('invalid');
 
                 cvcInput.value = '';
                 cvcInput.display.textContent = '000';
+                cvcInput.classList.remove('invalid');
             })
             console.log('submitted');
         } else {
