@@ -20,10 +20,6 @@ body {
     overflow: hidden;
 }
 
-.completed {
-    display: none;
-}
-
 .site-container {
     width: 100vw;
     height: 100vh;
@@ -48,6 +44,36 @@ body {
     margin-right: 15%;
 }
 
+.completed {
+    display: none;
+    flex-direction: column;
+    width: 380px;
+    height: 360px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.check {
+    margin-bottom: 1rem;
+}
+
+.completed>h1 {
+    letter-spacing: 0.1em;
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--dark)
+}
+
+.completed>p {
+    color: var(--violet);
+}
+
+.completed>button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
 form {
     display: flex;
     flex-direction: column;
@@ -68,11 +94,11 @@ form>label>span {
 
 input {
     margin-top: 0.25rem;
-    margin-bottom: 1rem;
     height: 2.5em;
     padding: 1em;
     border-radius: 8px;
     border: 1px solid var(--grey);
+    color: var(--dark);
 }
 
 input::placeholder {
@@ -83,14 +109,37 @@ input:focus {
     outline-color: hsl(249, 99%, 64%);
 }
 
+input.invalid {
+    border-color: var(--red);
+}
+
+input.invalid:focus {
+    outline-color: var(--red);
+}
+
 .end-details {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
+#month-input-container, #year-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
 .date>input {
     width: 4em;
+}
+
+p.error {
+    color: var(--red);
+    font-size: 11px;
+    margin-top: 0.35em;
+    margin-bottom: 0.75em;
+    transition: all 0.2s ease;
+    opacity: 0;
 }
 
 #cvc {
@@ -114,8 +163,8 @@ button {
     background-color: var(--dark);
     color: white;
     cursor: pointer;
-    margin-top: 1rem;
     transition: all 0.2s ease;
+    margin-top: 0.75em;
 }
 
 button:hover {
@@ -149,11 +198,13 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    width: 100%;
 }
 
 .card-content>h1 {
     font-size: 1.5rem;
     letter-spacing: 0.15em;
+    text-align: center;
 }
 
 .lower-card-details {
@@ -165,6 +216,11 @@ button:hover {
 .lower-card-details>span {
     font-size: 0.75rem;
     letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+#date-display>span {
+    font-size: inherit;
 }
 
 .card-back {

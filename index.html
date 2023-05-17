@@ -14,35 +14,44 @@
     <div class="content">
       <img src="./images/bg-main-desktop.png" class="bg-img-dsk">
       <div class="form-half">
-        <form action="#">
+        <form action="#" id="form">
           <label for="name">
             <span>CARDHOLDER NAME</span>
           </label>
           <input type="text" id="name" placeholder="e.g. Jane Appleseed">
+          <p class="error" id="name-error-display">Incorrect Format</p>
           <label for="number">
             <span>CARD NUMBER</span>
           </label>
           <input type="text" id="number" placeholder="e.g. 1234 5678 9123 0000">
+          <p class="error" id="number-error-display">Incorrect Format</p>
           <div class="end-details">
             <label>
               <span>EXP. DATE (MM/YY)</span>
               <div class="date">
-                <input type="text" id="month" placeholder="MM">
-                <input type="text" id="year" placeholder="YY">
+                <div class="date" id="month-input-container">
+                  <input type="text" id="month" placeholder="MM">
+                  <p class="error" id="month-error-display">Invalid</p>
+                </div>
+                <div class="date" id="year-input-container">
+                  <input type="text" id="year" placeholder="YY">
+                  <p class="error" id="year-error-display">Invalid</p>
+                </div>
               </div>
             </label>
             <label for="cvc">
               <span>CVC</span>
               <input type="text" id="cvc" placeholder="e.g. 123">
+              <p class="error" id="cvc-error-display">Incorrect format</p>
             </label>
           </div>
-          <button type="submit">Confirm</button>
+          <button type="submit" id="submit">Confirm</button>
         </form>
         <div class="completed">
           <img src="./images/icon-complete.svg" alt="complete" class="check">
           <h1>THANK YOU!</h1>
           <p>We've added your card details</p>
-          <button>Continue</button>
+          <button id="continue-btn">Continue</button>
         </div>
       </div>
       <div class="card-front">
@@ -51,7 +60,11 @@
           <h1 id="card-number-display">0000 0000 0000 0000</h1>
           <div class="lower-card-details">
             <span id="name-display">JANE APPLESEED</span>
-            <span id="date-display">00/00</span>
+            <span id="date-display">
+              <span id="month-display">00</span>
+              /
+              <span id="year-display">00</span>
+            </span>
           </div>
         </div>
       </div>
